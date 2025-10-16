@@ -44,11 +44,18 @@ const WhyChooseUs = () => {
     <section className="bg-white w-full overflow-hidden pr-20 py-[92px] max-md:max-w-full max-md:pr-5">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
         <div className="w-6/12 max-md:w-full max-md:ml-0">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/134aabf36f25d547c66db400a4b747b8fe34fdb0?placeholderIfAbsent=true"
-            className="aspect-[1.76] object-contain w-full self-stretch my-auto max-md:max-w-full max-md:mt-10"
-            alt="Why choose us illustration"
-          />
+          <div className="relative flex items-center justify-start max-md:justify-center max-md:mt-10">
+            <img
+              src="/Vector.png"
+              className="w-full max-w-[760px] lg:max-w-[840px] object-contain -translate-x-6 lg:-translate-x-10"
+              alt="Decorative background"
+            />
+            <img
+              src="/Audir8.png"
+              className="absolute left-0 w-[95%] max-w-[660px] lg:max-w-[760px] object-contain drop-shadow-2xl"
+              alt="Audi R8"
+            />
+          </div>
         </div>
         <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0">
           <div className="flex grow flex-col items-stretch justify-center max-md:max-w-full max-md:mt-10">

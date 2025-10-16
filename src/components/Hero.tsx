@@ -10,7 +10,7 @@ const Hero = () => {
               <span className="text-[rgba(36,36,36,1)]">
                 Find, book and rent a car
               </span>{" "}
-              <span className="text-[rgba(21,114,211,1)] relative inline-flex flex-col">
+              <span className="text-[#1572d3] relative inline-flex flex-col">
                 Easily
                 <span className="mt-1 h-[6px] w-full rounded-full bg-[rgba(21,114,211,0.25)]"></span>
               </span>
@@ -21,12 +21,12 @@ const Hero = () => {
             </p>
             <div className="flex flex-wrap items-center gap-4 mt-6">
               <img
-                src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/4657cc419cc5c5b68a49a890ec60d35abfd7fd65?placeholderIfAbsent=true"
+                src="/app-store.png"
                 className="aspect-[3.36] object-contain w-[124px] shrink-0 rounded-[7px] cursor-pointer hover:opacity-80 transition-opacity"
                 alt="Download on App Store"
               />
               <img
-                src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/5e59e17f1b0628bd2cb6162e27bb101bb6688e0c?placeholderIfAbsent=true"
+                src="/google-play.png"
                 className="aspect-[3.36] object-contain w-[124px] shrink-0 rounded-[7px] cursor-pointer hover:opacity-80 transition-opacity"
                 alt="Get it on Google Play"
               />

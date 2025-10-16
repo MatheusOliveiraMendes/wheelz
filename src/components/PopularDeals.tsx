@@ -11,7 +11,7 @@ const PopularDeals = () => {
       airConditioning: true,
       doors: 4,
       price: 1800,
-      image: "https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/f43069ce9b367c19a9d5ca0886047bfc1791937d?placeholderIfAbsent=true",
+      image: "/bluecar.png",
       imageAspect: "aspect-[2]",
       imageWidth: "w-52",
       marginTop: "mt-[-130px]"
@@ -25,7 +25,7 @@ const PopularDeals = () => {
       airConditioning: true,
       doors: 2,
       price: 2100,
-      image: "https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/d63db47e68db94fdf3376e53448a668085007906?placeholderIfAbsent=true",
+      image: "/audi.png",
       imageAspect: "aspect-[2.3]",
       imageWidth: "w-[209px]",
       marginTop: "mt-[-127px]"
@@ -39,7 +39,7 @@ const PopularDeals = () => {
       airConditioning: true,
       doors: 4,
       price: 1600,
-      image: "https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/33fad99e2dabec2553d0c43a4ec08a743e641069?placeholderIfAbsent=true",
+      image: "/bmw.png",
       imageAspect: "aspect-[2.15]",
       imageWidth: "w-52",
       marginTop: "-mt-32"
@@ -53,7 +53,7 @@ const PopularDeals = () => {
       airConditioning: true,
       doors: 2,
       price: 2300,
-      image: "https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/4ce9cb06fb1d07a34255ce85dfc72fc579c97b3e?placeholderIfAbsent=true",
+      image: "/lambo.png",
       imageAspect: "aspect-[2.44]",
       imageWidth: "w-52",
       marginTop: "mt-[-123px]"
