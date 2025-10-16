@@ -21,7 +21,6 @@ const CarCard: React.FC<CarCardProps> = ({
   reviews,
   passengers,
   transmission,
-  airConditioning,
   doors,
   price,
   image,
