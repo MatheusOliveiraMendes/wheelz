@@ -21,7 +21,7 @@ const CarCard: React.FC<CarCardProps> = ({
   reviews,
   passengers,
   transmission,
-  
+  airConditioning,
   doors,
   price,
   image,
@@ -51,8 +51,8 @@ const CarCard: React.FC<CarCardProps> = ({
               </h3>
               <div className="flex items-center gap-1.5 text-xs text-black font-normal leading-none mt-3">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/ad25870a4d52459ebbe632271519389f35df7315?placeholderIfAbsent=true"
-                  className="aspect-[1] object-contain w-4 self-stretch shrink-0 my-auto rounded-[1px]"
+                  src="/star.svg"
+                  className="aspect-square object-contain w-4 self-stretch shrink-0 my-auto rounded-[1px] filter brightness-0 invert-[55%]"
                   alt="Star rating"
                 />
                 <div className="self-stretch my-auto">
@@ -77,8 +77,8 @@ const CarCard: React.FC<CarCardProps> = ({
                 </div>
                 <div className="self-stretch flex items-center gap-[5px] whitespace-nowrap my-auto">
                   <img
-                    src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/beccb272bade12bc9ec5a0998dc8665b6d2714d4?placeholderIfAbsent=true"
-                    className="aspect-[1] object-contain w-5 self-stretch shrink-0 my-auto"
+                    src="/manual-transmission.svg"
+                    className="aspect-square object-contain w-5 self-stretch shrink-0 my-auto filter brightness-0 invert-[62%]"
                     alt="Transmission"
                   />
                   <div className="self-stretch my-auto">
@@ -89,8 +89,8 @@ const CarCard: React.FC<CarCardProps> = ({
               <div className="flex w-full gap-[19px] mt-2">
                 <div className="flex items-center gap-1">
                   <img
-                    src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/aa749db6016dde9871c6b974864eb5a842f9eeb6?placeholderIfAbsent=true"
-                    className="aspect-[1] object-contain w-5 self-stretch shrink-0 my-auto"
+                    src="/air-conditioner.svg"
+                    className="aspect-square object-contain w-5 self-stretch shrink-0 my-auto filter brightness-0 invert-[62%]"
                     alt="Air conditioning"
                   />
                   <div className="self-stretch my-auto">
@@ -99,8 +99,8 @@ const CarCard: React.FC<CarCardProps> = ({
                 </div>
                 <div className="flex items-center gap-[5px]">
                   <img
-                    src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/ec8d84eeb8f8cdeb996c14ce36712d73bf66a992?placeholderIfAbsent=true"
-                    className="aspect-[1] object-contain w-5 self-stretch shrink-0 my-auto"
+                    src="/car.svg"
+                    className="aspect-square object-contain w-5 self-stretch shrink-0 my-auto filter brightness-0 invert-[62%]"
                     alt="Doors"
                   />
                   <div className="self-stretch my-auto">

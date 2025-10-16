@@ -11,16 +11,11 @@ const Footer = () => {
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
             <div className="w-[22%] max-md:w-full max-md:ml-0">
               <div className="flex flex-col items-stretch justify-center max-md:mt-10">
-                <div className="flex items-center gap-2 text-base text-white font-semibold whitespace-nowrap">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/3aa334e12bf6cae25ce78040ef1019518b30aab4?placeholderIfAbsent=true"
-                    className="aspect-[0.92] object-contain w-6 self-stretch shrink-0 my-auto"
-                    alt="RentCars Logo"
-                  />
-                  <div className="self-stretch my-auto">
-                    RENTCARS
-                  </div>
-                </div>
+                <img
+                  src="/wheels-footer.png"
+                  className="w-40 lg:w-48 object-contain"
+                  alt="Wheels Logo"
+                />
                 <div className="flex flex-col text-sm text-[rgba(214,214,214,1)] font-normal mt-8">
                   <div className="self-stretch flex items-center gap-2 leading-[21px]">
                     <div className="self-stretch flex w-6 shrink-0 h-6 my-auto">
