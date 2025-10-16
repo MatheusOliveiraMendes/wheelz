@@ -1,12 +1,12 @@
 const Header = () => {
   return (
-    <header className="bg-white flex w-full flex-col overflow-hidden items-center justify-center px-20 py-11 max-md:max-w-full max-md:px-5">
-      <div className="flex w-full max-w-[1120px] flex-col items-stretch max-md:max-w-full">
-        <nav className="flex w-full items-center gap-[40px_100px] text-base font-medium justify-between flex-wrap max-md:max-w-full">
+    <header className="bg-white flex w-full flex-col overflow-hidden items-center justify-center px-5 md:px-10 lg:px-20 py-11">
+      <div className="flex w-full max-w-[1120px] flex-col items-stretch mx-auto">
+        <nav className="flex w-full items-center gap-[40px_100px] text-base font-medium justify-between flex-wrap">
           <div className="self-stretch flex items-center gap-2 text-[rgba(21,114,211,1)] font-semibold whitespace-nowrap my-auto">
             <img
-              src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/bde045eb95dc2e604aec83d115f08908d793078b?placeholderIfAbsent=true"
-              className="aspect-[0.96] object-contain w-6 self-stretch shrink-0 my-auto"
+              src="/Frame.png"
+              className="aspect-square object-contain w-6 self-stretch shrink-0 my-auto"
               alt="RentCars Logo"
             />
             <div className="self-stretch my-auto">
