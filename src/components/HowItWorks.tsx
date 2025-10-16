@@ -32,72 +32,39 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="bg-white flex w-full flex-col overflow-hidden items-stretch justify-center py-[86px] max-md:max-w-full">
-      <div className="flex flex-col items-center max-md:max-w-full">
-        <div className="flex flex-col items-center justify-center max-md:max-w-full">
-          <div className="flex flex-col items-center font-medium max-md:max-w-full">
-            <div className="bg-[rgba(21,114,211,0.1)] flex gap-2 text-sm text-[rgba(21,114,211,1)] px-8 py-4 rounded-lg max-md:px-5">
-              <div>HOW IT WORK</div>
+    <section className="bg-white flex w-full flex-col overflow-hidden items-stretch justify-center px-5 md:px-10 lg:px-20 py-24">
+      <div className="flex flex-col w-full max-w-[1120px] mx-auto">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
+          <div className="lg:w-[360px]">
+            <div className="bg-[rgba(21,114,211,0.08)] text-sm text-[rgba(21,114,211,1)] font-semibold inline-flex px-6 py-3 rounded-lg">
+              HOW IT WORK
             </div>
-            <h2 className="text-[rgba(51,51,51,1)] text-[38px] leading-[1.3] text-center mt-8 max-md:max-w-full">
+            <h2 className="text-[rgba(51,51,51,1)] text-[38px] leading-[1.3] mt-6">
               Rent with following 3 working steps
             </h2>
           </div>
-          <div className="flex items-center gap-[40px_200px] justify-center flex-wrap mt-20 max-md:max-w-full max-md:mt-10">
-            {steps.map((step, index) => (
-              <article key={index} className="self-stretch flex flex-col items-center w-28 my-auto">
-                <div className="bg-[rgba(236,245,255,1)] flex min-h-28 w-28 flex-col items-center justify-center h-28 rounded-2xl">
-                  <div className="flex min-h-12 w-12">
-                    {step.icon}
-                  </div>
-                </div>
-                <div className="flex flex-col items-center font-medium justify-center mt-10">
-                  <h3 className="text-black text-xl">
-                    {step.title}
-                  </h3>
-                  <p className="text-[rgba(109,109,109,1)] text-sm leading-[21px] text-center mt-6 whitespace-pre-line">
-                    {step.description}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <p className="text-[rgba(92,92,92,1)] text-base leading-7 max-w-[400px]">
+            Follow these simple steps to reserve your car and get on the road in no time.
+          </p>
         </div>
-        <div className="flex gap-[40px_96px] mt-40 max-md:max-w-full max-md:mt-10">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/2cfa6232b92c8c50d25b5a6db2c2264e038cb042?placeholderIfAbsent=true"
-            className="aspect-[2.56] object-contain w-[172px] shrink-0"
-            alt="Partner logo"
-          />
-          <div className="bg-white flex flex-col items-stretch justify-center w-56 py-[25px]">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/498d0336975530f9a6b4aadabf2005e04a2c22a0?placeholderIfAbsent=true"
-              className="aspect-[13.16] object-contain w-56"
-              alt="Partner logo"
-            />
-          </div>
-          <img
-            src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/59be007abc05f6c471dea5bf26ea009da00d50ea?placeholderIfAbsent=true"
-            className="aspect-[1.18] object-contain w-[79px] shrink-0"
-            alt="Partner logo"
-          />
-          <div className="bg-white flex flex-col items-stretch justify-center w-56 py-[25px]">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/0e78de808c7f793e1debef3f7ce352a838c3c4e8?placeholderIfAbsent=true"
-              className="aspect-[13.16] object-contain w-56"
-              alt="Partner logo"
-            />
-          </div>
-          <img
-            src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/12497645cd8bf67715181e070ceacbb11889f990?placeholderIfAbsent=true"
-            className="aspect-[2.15] object-contain w-36 shrink-0"
-            alt="Partner logo"
-          />
-          <img
-            src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/c3c3e74a9c75d5c34b060d3d136321d4bcc727a6?placeholderIfAbsent=true"
-            className="aspect-[1.75] object-contain w-[117px] shrink-0"
-            alt="Partner logo"
-          />
+        <div className="grid gap-10 mt-16 lg:mt-20 lg:grid-cols-3">
+          {steps.map((step, index) => (
+            <article key={index} className="flex flex-col bg-[rgba(243,248,255,1)] rounded-3xl p-8 shadow-[0px_10px_30px_rgba(21,114,211,0.08)] hover:shadow-[0px_18px_40px_rgba(21,114,211,0.12)] transition-shadow">
+              <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-[0px_8px_18px_rgba(21,114,211,0.12)]">
+                <div className="flex h-10 w-10 items-center justify-center">
+                  {step.icon}
+                </div>
+              </div>
+              <div className="flex flex-col font-medium justify-center mt-8">
+                <h3 className="text-black text-2xl">
+                  {step.title}
+                </h3>
+                <p className="text-[rgba(109,109,109,1)] text-base leading-7 mt-4 whitespace-pre-line">
+                  {step.description}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
