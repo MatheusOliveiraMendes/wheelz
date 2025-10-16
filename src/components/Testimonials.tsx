@@ -1,108 +1,123 @@
+const testimonials = [
+  {
+    rating: 5.0,
+    stars: 5,
+    text: "I've relied on Wheelz for two years of business travel. I reserve through the app, pick up at the airport, and I'm on the road. The service is flawless!",
+    name: "Jenny Wilson",
+    location: "New York, NY",
+    image: "/Smiling.jpg",
+  },
+  {
+    rating: 4.9,
+    stars: 5,
+    text: "The concierge upgraded me to a convertible within minutes. It quickly became my go-to app for weekend getaways.",
+    name: "Charlie Johnson",
+    location: "Los Angeles, CA",
+    image: "/Charlie-Johnson.png",
+  },
+];
+
+const renderStars = (count: number) =>
+  Array.from({ length: 5 }).map((_, index) => (
+    <img
+      key={index}
+      src="/Star.png"
+      className={`h-5 w-5 object-contain ${index < count ? "" : "opacity-30"}`}
+      alt={index < count ? "Filled star" : "Empty star"}
+    />
+  ));
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      rating: 5.0,
-      stars: 3,
-      text: "I have been using your services for 3 years. Your service is great, I will continue to use your service.",
-      name: "Jenny Wilson",
-      location: "From New York, US",
-      image: "/Smiling.jpg"
-    },
-    {
-      rating: 5.0,
-      stars: 5,
-      text: "I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.",
-      name: "Charlie Johnson",
-      location: "From New York, US",
-      image: "/Charlie-Johnson.png"
-    }
-  ];
-
-  const renderStars = (count: number) => {
-    return Array.from({ length: 5 }).map((_, index) => (
-      <img
-        key={index}
-        src="/Star.png"
-        className={`h-6 w-6 object-contain ${index < count ? '' : 'opacity-30'}`}
-        alt={index < count ? 'Filled star' : 'Empty star'}
-      />
-    ));
-  };
-
   return (
-    <section className="relative bg-[rgba(247,251,255,1)] flex w-full flex-col overflow-hidden items-stretch px-5 md:px-10 lg:px-20 py-24">
+    <section
+      id="stories"
+      className="relative overflow-hidden bg-[rgba(247,251,255,1)] px-6 py-24 md:px-10 lg:px-12 lg:py-[120px]"
+    >
       <img
         src="/Decorative-swoosh.png"
-        className="pointer-events-none absolute right-8 top-8 hidden md:block w-[220px] lg:w-[280px] object-contain"
+        className="pointer-events-none absolute right-10 top-20 hidden h-[280px] w-[240px] object-contain lg:block"
         alt="Decorative swoosh"
       />
-      <div className="flex flex-col w-full max-w-[1120px] mx-auto relative">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div>
-            <div className="inline-flex items-center bg-[rgba(21,114,211,0.08)] text-sm text-[rgba(21,114,211,1)] font-semibold px-6 py-3 rounded-lg">
-              TESTIMONIALS
-            </div>
-            <h2 className="text-[rgba(51,51,51,1)] text-[38px] leading-[1.2] mt-6">
-              What people say about us?
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-16">
+        <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
+          <div className="space-y-6">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[rgba(21,114,211,0.1)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(21,114,211,1)]">
+              Real experiences
+            </span>
+            <h2 className="text-3xl font-semibold leading-tight text-[rgba(41,41,41,1)] md:text-[40px]">
+              Stories from drivers who trust Wheelz
             </h2>
           </div>
-          <p className="text-[rgba(92,92,92,1)] text-base leading-7 max-w-[360px]">
-            Real feedback from renters who rely on us every day for smooth, stress-free journeys.
+          <p className="text-base leading-7 text-[rgba(92,92,92,1)]">
+            Every rating highlights peace of mind, speed, and support from booking to drop-off. See how our community gets the most from on-demand mobility.
           </p>
         </div>
-        <div className="grid gap-8 lg:gap-10 mt-16 lg:mt-20 md:grid-cols-2 xl:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <article
-              key={index}
-              className="bg-white rounded-3xl shadow-[0px_18px_32px_rgba(16,76,139,0.12)] hover:shadow-[0px_22px_42px_rgba(16,76,139,0.18)] transition-shadow flex flex-col"
-            >
-              {testimonial.image && (
-                <img
-                  src={testimonial.image}
-                  className="h-56 w-full object-cover rounded-t-3xl"
-                  alt={`${testimonial.name} photo`}
-                />
-              )}
-              <div className="flex flex-col gap-6 p-8">
-                <div>
-                  <div className="text-[rgba(56,56,56,1)] text-lg font-medium">
-                    <span className="text-5xl font-semibold text-[rgba(56,56,56,1)]">
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="grid gap-8 md:grid-cols-2">
+            {testimonials.map((testimonial) => (
+              <article
+                key={testimonial.name}
+                className="flex flex-col overflow-hidden rounded-3xl border border-[rgba(226,234,244,1)] bg-white/80 shadow-[0px_20px_36px_rgba(21,114,211,0.1)] backdrop-blur"
+              >
+                {testimonial.image && (
+                  <img
+                    src={testimonial.image}
+                    className="h-56 w-full object-cover"
+                    alt={`Photo of ${testimonial.name}`}
+                  />
+                )}
+                <div className="flex flex-col gap-6 p-8">
+                  <div className="flex items-center justify-between">
+                    <span className="text-4xl font-semibold text-[rgba(21,114,211,1)]">
                       {testimonial.rating.toFixed(1)}
-                    </span>{" "}
-                    stars
+                    </span>
+                    <div className="flex items-center gap-1">
+                      {renderStars(testimonial.stars)}
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 mt-4">
-                    {renderStars(testimonial.stars)}
+                  <blockquote className="text-base leading-7 text-[rgba(56,56,56,1)]">
+                    “{testimonial.text}”
+                  </blockquote>
+                  <div>
+                    <div className="text-lg font-semibold text-[rgba(40,40,40,1)]">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-sm text-[rgba(120,120,120,1)]">
+                      {testimonial.location}
+                    </div>
                   </div>
                 </div>
-                <blockquote className="text-[rgba(40,40,40,1)] text-lg leading-[28px] italic">
-                  “{testimonial.text}”
-                </blockquote>
-                <div>
-                  <div className="text-[rgba(37,37,37,1)] text-xl font-semibold">
-                    {testimonial.name}
-                  </div>
-                  <div className="text-[rgba(131,131,131,1)] text-sm mt-2">
-                    {testimonial.location}
-                  </div>
-                </div>
-              </div>
-            </article>
-          ))}
-          <article className="relative bg-gradient-to-br from-[rgba(21,114,211,1)] to-[rgba(31,83,170,1)] text-white rounded-3xl overflow-hidden p-8 flex flex-col justify-between shadow-[0px_18px_32px_rgba(21,114,211,0.24)]">
-            <div className="flex flex-col gap-4">
-              <h3 className="text-3xl font-semibold leading-tight">
-                Ready to share your experience?
+              </article>
+            ))}
+          </div>
+          <article className="flex h-full flex-col justify-between gap-10 overflow-hidden rounded-3xl bg-gradient-to-br from-[rgba(21,114,211,1)] to-[rgba(12,48,112,1)] p-10 text-white shadow-[0px_24px_48px_rgba(21,114,211,0.28)]">
+            <div className="space-y-5">
+              <span className="inline-flex rounded-full bg-white/15 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-white/80">
+                Share your journey
+              </span>
+              <h3 className="text-3xl font-semibold leading-snug">
+                Your voice helps others choose their next ride
               </h3>
-              <p className="text-base text-[rgba(225,239,255,1)] leading-7">
-                Tell us how we did and help thousands of other renters choose the right service.
+              <p className="text-sm leading-7 text-[rgba(215,230,255,1)]">
+                Tell the Wheelz community about your ride: pick-up speed, vehicle condition, concierge support—every detail guides another traveler.
               </p>
             </div>
-            <button className="mt-8 inline-flex items-center justify-center gap-2 bg-white text-[rgba(21,114,211,1)] font-semibold rounded-xl px-6 py-3 hover:bg-[rgba(240,248,255,1)] transition-colors">
+            <button className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-[rgba(21,114,211,1)] transition-colors hover:bg-[rgba(240,248,255,1)]">
               Leave a review
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14M12 5l7 7-7 7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </button>
           </article>

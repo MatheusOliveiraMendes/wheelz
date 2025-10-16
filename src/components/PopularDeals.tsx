@@ -14,7 +14,6 @@ const PopularDeals = () => {
       image: "/bluecar.png",
       imageAspect: "aspect-[2]",
       imageWidth: "w-52",
-      marginTop: "mt-[-130px]"
     },
     {
       name: "Audi R8",
@@ -28,7 +27,6 @@ const PopularDeals = () => {
       image: "/audi.png",
       imageAspect: "aspect-[2.3]",
       imageWidth: "w-[209px]",
-      marginTop: "mt-[-127px]"
     },
     {
       name: "BMW M3",
@@ -42,7 +40,6 @@ const PopularDeals = () => {
       image: "/bmw.png",
       imageAspect: "aspect-[2.15]",
       imageWidth: "w-52",
-      marginTop: "-mt-32"
     },
     {
       name: "Lamborghini Huracan",
@@ -56,8 +53,7 @@ const PopularDeals = () => {
       image: "/lambo.png",
       imageAspect: "aspect-[2.44]",
       imageWidth: "w-52",
-      marginTop: "mt-[-123px]"
-    }
+    },
   ];
 
   const handleShowAllVehicles = () => {
@@ -66,17 +62,37 @@ const PopularDeals = () => {
   };
 
   return (
-    <section className="bg-white flex w-full flex-col overflow-hidden items-center justify-center px-20 py-[84px] max-md:max-w-full max-md:px-5">
-      <div className="flex flex-col items-center max-md:max-w-full">
-        <div className="flex flex-col items-center font-medium max-md:max-w-full">
-          <div className="bg-[rgba(21,114,211,0.1)] flex gap-2 text-sm text-[rgba(21,114,211,1)] px-8 py-4 rounded-lg max-md:px-5">
-            <div>POPULAR RENTAL DEALS</div>
+    <section
+      id="deals"
+      className="relative overflow-hidden bg-white px-6 py-24 md:px-10 lg:px-12 lg:py-[120px]"
+    >
+      <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[rgba(236,245,255,1)] to-transparent" />
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-14">
+        <div className="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="space-y-4">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[rgba(21,114,211,0.1)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(21,114,211,1)]">
+              Popular rental deals
+            </span>
+            <h2 className="text-3xl font-semibold leading-tight text-[rgba(41,41,41,1)] md:text-[40px]">
+              Community favorites our drivers love this week
+            </h2>
+            <p className="text-base text-[rgba(92,92,92,1)] lg:max-w-xl">
+              Iconic models with special pricing, full protection, 24h assistance, and free cancellation included.
+            </p>
           </div>
-          <h2 className="text-[rgba(51,51,51,1)] text-[38px] leading-[1.3] mt-6 max-md:max-w-full">
-            Most popular cars rental deals
-          </h2>
+          <div className="flex items-center gap-2 rounded-full border border-[rgba(226,234,244,1)] bg-white px-4 py-2 text-sm text-[rgba(72,72,72,1)] shadow-[0px_14px_28px_rgba(21,114,211,0.08)]">
+            <button className="rounded-full bg-[rgba(21,114,211,1)] px-4 py-2 text-white">
+              Sports
+            </button>
+            <button className="rounded-full px-4 py-2 hover:text-[rgba(21,114,211,1)]">
+              SUVs
+            </button>
+            <button className="rounded-full px-4 py-2 hover:text-[rgba(21,114,211,1)]">
+              Executive
+            </button>
+          </div>
         </div>
-        <div className="flex gap-8 flex-wrap mt-16 max-md:max-w-full max-md:mt-10">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {cars.map((car, index) => (
             <CarCard
               key={index}
@@ -91,23 +107,34 @@ const PopularDeals = () => {
               image={car.image}
               imageAspect={car.imageAspect}
               imageWidth={car.imageWidth}
-              marginTop={car.marginTop}
             />
           ))}
         </div>
-        <button
-          onClick={handleShowAllVehicles}
-          className="border flex min-h-12 w-[216px] max-w-full items-center gap-2 text-sm text-[rgba(78,78,78,1)] font-medium leading-[1.3] justify-center mt-16 px-2 py-3.5 rounded-lg border-[rgba(224,224,224,1)] border-solid max-md:mt-10 hover:bg-gray-50 transition-colors"
-        >
-          <div className="self-stretch my-auto">
-            Show all vehicles
-          </div>
-          <div className="self-stretch flex w-5 shrink-0 h-5 my-auto">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-        </button>
+        <div className="flex justify-center">
+          <button
+            onClick={handleShowAllVehicles}
+            className="inline-flex items-center gap-2 rounded-full border border-[rgba(21,114,211,0.2)] bg-white px-6 py-3 text-sm font-semibold text-[rgba(72,72,72,1)] transition-colors hover:bg-[rgba(21,114,211,0.08)]"
+          >
+            Explore the full fleet
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[rgba(21,114,211,0.12)] text-[rgba(21,114,211,1)]">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14M12 5l7 7-7 7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
       </div>
     </section>
   );

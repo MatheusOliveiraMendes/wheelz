@@ -26,7 +26,7 @@ const DownloadApp = () => {
                   <div>DOWNLOAD</div>
                 </div>
                 <h2 className="text-[rgba(40,40,40,1)] text-5xl font-semibold leading-[58px] mt-6 max-md:max-w-full max-md:text-[40px] max-md:leading-[54px]">
-                  Download Rentcars App for{" "}
+                  Download Wheelz App for{" "}
                   <span className="text-[rgba(21,114,211,1)]">FREE</span>
                 </h2>
               </div>

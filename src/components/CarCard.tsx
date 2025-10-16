@@ -12,7 +12,6 @@ interface CarCardProps {
   image: string;
   imageAspect: string;
   imageWidth: string;
-  marginTop: string;
 }
 
 const CarCard: React.FC<CarCardProps> = ({
@@ -25,8 +24,7 @@ const CarCard: React.FC<CarCardProps> = ({
   price,
   image,
   imageAspect,
-  imageWidth,
-  marginTop
+  imageWidth
 }) => {
   const handleRentNow = () => {
     console.log(`Rent now clicked for ${name}`);
@@ -34,110 +32,113 @@ const CarCard: React.FC<CarCardProps> = ({
   };
 
   return (
-    <article className="shadow-[0px_12px_24px_rgba(16,76,139,0.16)] min-w-60 w-64 pt-[26px] rounded-[0px_0px_0px_0px] hover:shadow-[0px_16px_32px_rgba(16,76,139,0.24)] transition-shadow">
-      <img
-        src={image}
-        className={`${imageAspect} object-contain ${imageWidth} z-10 mx-6 max-md:mx-2.5`}
-        alt={name}
-      />
-      <div className={`bg-white ${marginTop} rounded-2xl`}>
-        <div className="bg-white flex min-h-[155px] max-w-full w-64 rounded-[16px_16px_0px_0px]" />
-        <div className="max-w-full w-64 pb-6 px-6 max-md:px-5">
-          <div className="flex w-full flex-col items-stretch">
-            <div>
-              <h3 className="text-neutral-800 text-base font-medium leading-none">
-                {name}
-              </h3>
-              <div className="flex items-center gap-1.5 text-xs text-black font-normal leading-none mt-3">
-                <img
-                  src="/star.svg"
-                  className="aspect-square object-contain w-4 self-stretch shrink-0 my-auto rounded-[1px] filter brightness-0 invert-[55%]"
-                  alt="Star rating"
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[rgba(226,234,244,1)] bg-white/80 p-6 shadow-[0px_18px_32px_rgba(21,114,211,0.08)] backdrop-blur transition-transform hover:-translate-y-1 hover:shadow-[0px_26px_48px_rgba(21,114,211,0.14)]">
+      <div className="relative flex h-[180px] items-center justify-center overflow-visible">
+        <div className="absolute inset-x-6 top-10 h-28 rounded-[32px] bg-[rgba(236,245,255,1)] blur-lg transition-all group-hover:top-8" />
+        <img
+          src={image}
+          className={`relative z-10 ${imageAspect} ${imageWidth} max-w-full object-contain transition-transform duration-300 group-hover:-translate-y-1`}
+          alt={name}
+        />
+      </div>
+      <div className="mt-6 flex flex-1 flex-col">
+        <div className="flex flex-col gap-3">
+          <h3 className="text-lg font-semibold text-[rgba(30,30,30,1)]">
+            {name}
+          </h3>
+          <div className="flex items-center gap-2 text-sm text-[rgba(89,89,89,1)]">
+            <img
+              src="/Star.png"
+              className="h-4 w-4 object-contain"
+              alt="Star icon"
+            />
+            <span className="font-semibold text-[rgba(21,114,211,1)]">
+              {rating.toFixed(1)}
+            </span>
+            <span className="text-[rgba(128,128,128,1)]">
+              ({reviews.toLocaleString()} reviews)
+            </span>
+          </div>
+        </div>
+        <div className="mt-4 grid gap-3 text-sm text-[rgba(120,120,120,1)]">
+          <div className="flex items-center justify-between">
+            <span className="flex items-center gap-2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"
+                  stroke="#5E5E5E"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
-                <div className="self-stretch my-auto">
-                  <span className="font-medium">{rating}</span>{" "}
-                  <span className="text-[rgba(128,128,128,1)]">
-                    ({reviews.toLocaleString()} reviews)
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="w-full max-w-52 text-xs text-[rgba(149,149,149,1)] font-normal leading-none mt-4">
-              <div className="flex w-full items-center gap-[40px_41px]">
-                <div className="self-stretch flex items-center gap-1 my-auto">
-                  <div className="self-stretch flex w-5 shrink-0 h-5 my-auto">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="#959595" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <div className="self-stretch my-auto">
-                    {passengers} Passagers
-                  </div>
-                </div>
-                <div className="self-stretch flex items-center gap-[5px] whitespace-nowrap my-auto">
-                  <img
-                    src="/manual-transmission.svg"
-                    className="aspect-square object-contain w-5 self-stretch shrink-0 my-auto filter brightness-0 invert-[62%]"
-                    alt="Transmission"
-                  />
-                  <div className="self-stretch my-auto">
-                    {transmission}
-                  </div>
-                </div>
-              </div>
-              <div className="flex w-full gap-[19px] mt-2">
-                <div className="flex items-center gap-1">
-                  <img
-                    src="/air-conditioner.svg"
-                    className="aspect-square object-contain w-5 self-stretch shrink-0 my-auto filter brightness-0 invert-[62%]"
-                    alt="Air conditioning"
-                  />
-                  <div className="self-stretch my-auto">
-                    Air Conditioning
-                  </div>
-                </div>
-                <div className="flex items-center gap-[5px]">
-                  <img
-                    src="/car.svg"
-                    className="aspect-square object-contain w-5 self-stretch shrink-0 my-auto filter brightness-0 invert-[62%]"
-                    alt="Doors"
-                  />
-                  <div className="self-stretch my-auto">
-                    {doors} Doors
-                  </div>
-                </div>
-              </div>
-            </div>
+              </svg>
+              {passengers} passengers
+            </span>
+            <span className="flex items-center gap-2">
+              <img
+                src="/manual-transmission.svg"
+                className="h-5 w-5 object-contain filter brightness-0 invert-[55%]"
+                alt="Transmission"
+              />
+              {transmission}
+            </span>
           </div>
-          <div className="w-full max-w-52 mt-6">
-            <div className="border min-h-0 w-full border-[rgba(224,224,224,1)] border-solid" />
-            <div className="flex w-full items-center gap-[40px_82px] font-normal justify-between mt-6">
-              <div className="text-[rgba(89,89,89,1)] text-sm leading-none self-stretch my-auto">
-                Price
-              </div>
-              <div className="text-black text-base leading-none self-stretch my-auto">
-                <span className="font-semibold text-[rgba(41,41,41,1)]">
-                  ${price.toLocaleString()}
-                </span>{" "}
-                <span className="text-sm text-[rgba(156,156,156,1)]">
-                  /day
-                </span>
-              </div>
-            </div>
-            <button
-              onClick={handleRentNow}
-              className="bg-[rgba(21,114,211,1)] flex min-h-10 w-full items-center gap-2 text-sm text-white font-medium leading-none justify-center mt-6 px-2 py-2.5 rounded-lg hover:bg-[rgba(21,114,211,0.9)] transition-colors"
+          <div className="flex items-center justify-between">
+            <span className="flex items-center gap-2">
+              <img
+                src="/air-conditioner.svg"
+                className="h-5 w-5 object-contain filter brightness-0 invert-[55%]"
+                alt="Air conditioning"
+              />
+              Air conditioning
+            </span>
+            <span className="flex items-center gap-2">
+              <img
+                src="/car.svg"
+                className="h-5 w-5 object-contain filter brightness-0 invert-[55%]"
+                alt="Doors"
+              />
+              {doors} doors
+            </span>
+          </div>
+        </div>
+        <div className="mt-6 border-t border-[rgba(226,234,244,1)] pt-6">
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-[rgba(120,120,120,1)]">Daily rate from</span>
+            <span className="text-lg font-semibold text-[rgba(30,30,30,1)]">
+              ${price.toLocaleString()}
+              <span className="ml-1 text-xs font-normal text-[rgba(128,128,128,1)]">
+                /day
+              </span>
+            </span>
+          </div>
+          <button
+            onClick={handleRentNow}
+            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[rgba(21,114,211,1)] px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[rgba(21,114,211,0.92)]"
+          >
+            Book now
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div className="self-stretch my-auto">
-                Rent Now
-              </div>
-              <div className="self-stretch flex w-5 shrink-0 h-5 my-auto">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-            </button>
-          </div>
+              <path
+                d="M5 12h14M12 5l7 7-7 7"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </article>
