@@ -1,142 +1,107 @@
+const productLinks = ["Corporate plans", "Premium cars", "Subscriptions", "Gift cards"];
+const resourceLinks = ["Help center", "Pick-up guide", "Travel tips", "Affiliates"];
+const companyLinks = ["Our story", "Careers", "Press room", "Investors"];
 
 const Footer = () => {
-  const productLinks = ["Career", "Car", "Packages", "Features", "Priceline"];
-  const resourceLinks = ["Download", "Help Centre", "Guides", "Partner Network", "Cruises", "Developer"];
-  const aboutLinks = ["Why choose us", "Our Story", "Investor Relations", "Press Center", "Advertise"];
-
   return (
-    <footer className="bg-[rgba(5,28,52,1)] flex w-full flex-col overflow-hidden items-center justify-center px-20 py-[41px] max-md:max-w-full max-md:px-5">
-      <div className="flex w-full max-w-[1120px] flex-col max-md:max-w-full">
-        <div className="w-full max-w-[1064px] max-md:max-w-full">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-            <div className="w-[22%] max-md:w-full max-md:ml-0">
-              <div className="flex flex-col items-stretch justify-center max-md:mt-10">
-                <img
-                  src="/wheels-footer.png"
-                  className="w-40 lg:w-48 object-contain"
-                  alt="Wheels Logo"
-                />
-                <div className="flex flex-col text-sm text-[rgba(214,214,214,1)] font-normal mt-8">
-                  <div className="self-stretch flex items-center gap-2 leading-[21px]">
-                    <div className="self-stretch flex w-6 shrink-0 h-6 my-auto">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#D6D6D6"/>
-                      </svg>
-                    </div>
-                    <div className="w-[159px] my-auto">
-                      25566 Hc 1, Glenallen, Alaska, 99588, USA
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 mt-6">
-                    <div className="self-stretch flex w-6 shrink-0 h-6 my-auto">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="#D6D6D6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <div className="self-stretch my-auto">
-                      +603 4784 273 12
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 whitespace-nowrap mt-6">
-                    <div className="self-stretch flex w-6 shrink-0 h-6 my-auto">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#D6D6D6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <polyline points="22,6 12,13 2,6" stroke="#D6D6D6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <div className="self-stretch my-auto">
-                      rentcars@gmail.com
-                    </div>
-                  </div>
-                </div>
+    <footer className="bg-[#041326] px-6 pb-12 pt-16 text-white md:px-10 lg:px-12">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
+          <div className="space-y-8">
+            <img
+              src="/wheels-footer.png"
+              className="w-40 object-contain"
+              alt="Wheels Logo"
+            />
+            <p className="text-sm text-white/70">
+              Premium mobility for every itinerary. From boardroom trips to road-trip escapes, Wheelz connects you to fast bookings, immaculate cars, and 24/7 human support.
+            </p>
+            <div className="grid gap-4 text-sm text-white/70 sm:grid-cols-2 sm:gap-6">
+              <div className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-sm font-semibold text-white">
+                  HQ
+                </span>
+                <span>350 5th Ave, Midtown • New York, NY</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-sm font-semibold text-white">
+                  24h
+                </span>
+                <span>Support via app, phone (+1 646 555-0140) or WhatsApp</span>
               </div>
             </div>
-            <div className="w-[78%] ml-5 max-md:w-full max-md:ml-0">
-              <div className="grow mt-[7px] max-md:max-w-full max-md:mt-10">
-                <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-                  <div className="w-3/12 max-md:w-full max-md:ml-0">
-                    <div className="flex flex-col items-stretch max-md:mt-10">
-                      <h3 className="text-white text-base font-medium">
-                        Our Product
-                      </h3>
-                      <nav className="text-sm text-[rgba(214,214,214,1)] font-normal whitespace-nowrap mt-8">
-                        {productLinks.map((link, index) => (
-                          <div key={index} className={index > 0 ? "mt-4" : ""}>
-                            <button className="hover:text-white transition-colors">
-                              {link}
-                            </button>
-                          </div>
-                        ))}
-                      </nav>
-                    </div>
-                  </div>
-                  <div className="w-3/12 ml-5 max-md:w-full max-md:ml-0">
-                    <div className="max-md:mt-10">
-                      <h3 className="text-white text-base font-medium">
-                        Resources
-                      </h3>
-                      <nav className="text-sm text-[rgba(214,214,214,1)] font-normal mt-8">
-                        {resourceLinks.map((link, index) => (
-                          <div key={index} className={index > 0 ? "mt-4" : ""}>
-                            <button className="hover:text-white transition-colors">
-                              {link}
-                            </button>
-                          </div>
-                        ))}
-                      </nav>
-                    </div>
-                  </div>
-                  <div className="w-3/12 ml-5 max-md:w-full max-md:ml-0">
-                    <div className="flex flex-col items-center max-md:mt-10">
-                      <h3 className="text-white text-base font-medium">
-                        About Rentcars
-                      </h3>
-                      <nav className="text-sm text-[rgba(214,214,214,1)] font-normal mt-8">
-                        {aboutLinks.map((link, index) => (
-                          <div key={index} className={index > 0 ? "mt-4" : ""}>
-                            <button className="hover:text-white transition-colors">
-                              {link}
-                            </button>
-                          </div>
-                        ))}
-                      </nav>
-                    </div>
-                  </div>
-                  <div className="w-3/12 ml-5 max-md:w-full max-md:ml-0">
-                    <div className="max-md:mt-10">
-                      <h3 className="text-white text-base font-medium">
-                        Follow Us
-                      </h3>
-                      <div className="flex items-center gap-4 mt-8">
-                        <button className="hover:opacity-80 transition-opacity">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="#D6D6D6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                        </button>
-                        <button className="hover:opacity-80 transition-opacity">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#D6D6D6" strokeWidth="2"/>
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="#D6D6D6" strokeWidth="2"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#D6D6D6" strokeWidth="2" strokeLinecap="round"/>
-                          </svg>
-                        </button>
-                        <button className="hover:opacity-80 transition-opacity">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z" stroke="#D6D6D6" strokeWidth="2"/>
-                            <polygon points="9.75,15.02 15.5,11.75 9.75,8.48" stroke="#D6D6D6" strokeWidth="2"/>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div className="flex items-center gap-4">
+              {["facebook", "instagram", "youtube", "linkedin"].map((network) => (
+                <button
+                  key={network}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white transition-colors hover:border-white/30 hover:bg-white/20"
+                  aria-label={`Open ${network}`}
+                >
+                  <span className="text-sm font-semibold uppercase">
+                    {network[0]}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="grid gap-10 sm:grid-cols-2">
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">
+                Products
+              </h4>
+              <nav className="mt-6 space-y-3 text-sm text-white/80">
+                {productLinks.map((link) => (
+                  <button key={link} className="transition-colors hover:text-white">
+                    {link}
+                  </button>
+                ))}
+              </nav>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">
+                Resources
+              </h4>
+              <nav className="mt-6 space-y-3 text-sm text-white/80">
+                {resourceLinks.map((link) => (
+                  <button key={link} className="transition-colors hover:text-white">
+                    {link}
+                  </button>
+                ))}
+              </nav>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">
+                Company
+              </h4>
+              <nav className="mt-6 space-y-3 text-sm text-white/80">
+                {companyLinks.map((link) => (
+                  <button key={link} className="transition-colors hover:text-white">
+                    {link}
+                  </button>
+                ))}
+              </nav>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">
+                Download the app
+              </h4>
+              <div className="mt-6 space-y-3">
+                <img
+                  src="/app-store.png"
+                  className="w-[160px] rounded-xl object-contain"
+                  alt="Download on App Store"
+                />
+                <img
+                  src="/google-play.png"
+                  className="w-[160px] rounded-xl object-contain"
+                  alt="Get it on Google Play"
+                />
               </div>
             </div>
           </div>
         </div>
-        <div className="border self-stretch shrink-0 h-px mt-[63px] border-[rgba(87,87,87,1)] border-solid max-md:max-w-full max-md:mt-10" />
-        <div className="text-[rgba(214,214,214,1)] text-xs font-normal mt-8">
-          Copyright 2023 ・ Rentcars, All Rights Reserved
+        <div className="border-t border-white/10 pt-8 text-xs text-white/60">
+          © 2024 Wheelz Smart Mobility. All rights reserved.
         </div>
       </div>
     </footer>
